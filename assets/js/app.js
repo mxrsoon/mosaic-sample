@@ -53,9 +53,13 @@ function initialize() {
 	
 				new Text({
 					id: "cardText",
-					x: 32,
-					y: 104,
-					text: "Hello, world!"
+					x: 16,
+					y: 72,
+					width: new ComplexLength(() => app.view.width - 32),
+					height: 220,
+					padding: 16,
+					
+					text: "Hello, world! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas possimus quibusdam magni suscipit incidunt voluptates ut ab doloribus provident illo, perferendis autem eos obcaecati quod! Necessitatibus iusto maiores rem nulla.\nHello, world! Lorem ipsum dolor sit amet consectetur adipisicing elit."
 				}),
 	
 				new Button({
