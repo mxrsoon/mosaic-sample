@@ -29,7 +29,7 @@ const themes = {
 			text: Color.fromHex("#ffffffd0"),
 			background: Color.fromHex("#111"),
 			backgroundAlt: Color.fromHex("#222"),
-			primary: Color.fromHex("#869ff9"),
+			primary: Color.fromHex("#849fff"),
 			appBarBackground: "backgroundAlt",
 			cardBackground: "backgroundAlt"
 		}
