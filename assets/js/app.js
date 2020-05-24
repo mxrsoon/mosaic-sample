@@ -108,7 +108,7 @@ function initialize() {
 	});
 
 	webTheme = document.getElementById("theme-tag");
-	setTheme(themes.light);
+	setTheme(history.state && history.state.theme === "dark" ? themes.dark : themes.light);
 	setupBtn1();
 	setupBtn2();
 	setupStar1();
@@ -118,6 +118,7 @@ function initialize() {
 function setTheme(theme) {
 	app.theme = theme;
 	webTheme.content = app.theme.getColor("appBarBackground").toHex();
+	history.replaceState({ theme: theme === themes.light ? "light" : "dark" }, "");
 }
 
 function setupBtn1() {
