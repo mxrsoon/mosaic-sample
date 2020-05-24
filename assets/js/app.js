@@ -59,7 +59,7 @@ function initialize() {
 					height: 220,
 					padding: 16,
 					
-					text: "Hello, world! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas possimus quibusdam magni suscipit incidunt voluptates ut ab doloribus provident illo, perferendis autem eos obcaecati quod! Necessitatibus iusto maiores rem nulla.\nHello, world! Lorem ipsum dolor sit amet consectetur adipisicing elit."
+					text: "Hello, world! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas possimus quibusdam magni suscipit incidunt voluptates ut ab doloribus provident illo, perferendis autem eos obcaecati quod! Necessitatibus iusto maiores rem nulla."
 				}),
 	
 				new Button({
