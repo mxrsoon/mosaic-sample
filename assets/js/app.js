@@ -46,6 +46,7 @@ function initialize() {
 					id: "card",
 					x: 16,
 					y: 72,
+					width: new ComplexLength(() => app.view.width - 32),
 					height: 220,
 					focusable: true
 				}),
@@ -104,7 +105,6 @@ function initialize() {
 
 	webTheme = document.getElementById("theme-tag");
 	setTheme(themes.light);
-	setupCard();
 	setupBtn1();
 	setupBtn2();
 	setupStar1();
@@ -114,11 +114,6 @@ function initialize() {
 function setTheme(theme) {
 	app.theme = theme;
 	webTheme.content = app.theme.getColor("appBarBackground").toHex();
-}
-
-function setupCard() {
-	const card = app.findId("card");
-	card.width = new ComplexLength(() => card.parent ? card.parent.width - card.x * 2 : 0);
 }
 
 function setupBtn1() {
