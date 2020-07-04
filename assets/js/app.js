@@ -125,7 +125,7 @@ function setTheme(theme) {
 }
 
 function setupBtn1() {
-	const btn1 = app.findId("btn1");
+	const btn1 = app.findById("btn1");
 	
 	btn1.onClick.add(() => {
 		setTheme(app.theme === themes.light ? themes.dark : themes.light);
@@ -134,7 +134,7 @@ function setupBtn1() {
 }
 
 function setupBtn2() {
-	const btn2 = app.findId("btn2");
+	const btn2 = app.findById("btn2");
 	const y0 = btn2.y;
 	const y1 = y0 + btn2.height + 16;
 
@@ -165,7 +165,7 @@ function setupBtn2() {
 }
 
 function setupStar1() {
-	const star1 = app.findId("star1");
+	const star1 = app.findById("star1");
 	
 	new NumberAnimator({
 		from: star1.y,
@@ -186,7 +186,7 @@ function setupStar1() {
 }
 
 function setupStar2() {
-	const star2 = app.findId("star2");
+	const star2 = app.findById("star2");
 	const y0 = star2.y;
 	const y1 = star2.y - 50;
 
