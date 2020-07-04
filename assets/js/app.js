@@ -113,6 +113,9 @@ function initialize() {
 	setupBtn2();
 	setupStar1();
 	setupStar2();
+
+	// Put app on global scope for debugging
+	window.app = app;
 }
 
 function setTheme(theme) {
