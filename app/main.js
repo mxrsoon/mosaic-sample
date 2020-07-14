@@ -1,16 +1,17 @@
-import { HtmlUtils } from "../lib/mosaic/utils/index.js";
-import { Application } from "../lib/mosaic/core/index.js";
-import { View } from "../lib/mosaic/core/index.js";
-import { ComplexLength } from "../lib/mosaic/layout/index.js";
-import { Button, Surface } from "../lib/mosaic/widgets/index.js";
-import { Text } from "../lib/mosaic/widgets/index.js";
-import { AppBar } from "../lib/mosaic/widgets/index.js";
-import { Card } from "../lib/mosaic/widgets/index.js";
-import { StrokeStyle, Color, CornerRadius, RectangleShape, StarShape, ShadowStyle } from "../lib/mosaic/drawing/index.js";
-import { Theme, ThemeColor } from "../lib/mosaic/resources/index.js";
-import { NumberAnimator, AnimationState, Interpolator, BounceInterpolator, DecelerateInterpolator, OvershootInterpolator } from "../lib/mosaic/animation/index.js";
+import { Application } from "mosaic/core/index.js";
+import { View } from "mosaic/core/index.js";
+import { ComplexLength } from "mosaic/layout/index.js";
+import { Button, Surface } from "mosaic/widgets/index.js";
+import { Text } from "mosaic/widgets/index.js";
+import { AppBar } from "mosaic/widgets/index.js";
+import { Card } from "mosaic/widgets/index.js";
+import { StrokeStyle, Color, CornerRadius, RectangleShape, StarShape, ShadowStyle } from "mosaic/drawing/index.js";
+import { Theme, ThemeColor } from "mosaic/resources/index.js";
+import { NumberAnimator, AnimationState, Interpolator, BounceInterpolator, DecelerateInterpolator, OvershootInterpolator } from "mosaic/animation/index.js";
+import { Platform } from "mosaic/platform/index.js";
 
-let app, webTheme;
+/** @type {Application} */
+let app;
 
 const themes = {
 	light: new Theme({
@@ -107,7 +108,6 @@ function initialize() {
 		})
 	});
 
-	webTheme = document.getElementById("theme-tag");
 	setTheme(history.state && history.state.theme === "dark" ? themes.dark : themes.light);
 	setupBtn1();
 	setupBtn2();
@@ -116,11 +116,16 @@ function initialize() {
 
 	// Put app on global scope for debugging
 	window.app = app;
+	return app;
 }
 
 function setTheme(theme) {
 	app.theme = theme;
-	webTheme.content = app.theme.getColor("appBarBackground").toHex();
+	
+	if ("themeColor" in Platform) {
+		Platform.themeColor = app.theme.getColor("appBarBackground");
+	}
+
 	history.replaceState({ theme: theme === themes.light ? "light" : "dark" }, "");
 }
 
@@ -223,4 +228,4 @@ function setupStar2() {
 	jumpAnimator.start();
 }
 
-HtmlUtils.documentReady().then(initialize);
+initialize();

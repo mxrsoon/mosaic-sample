@@ -1,0 +1,3 @@
+[submodule "lib/mosaic-web"]
+	path = lib/mosaic-web
+	url = git@github.com:wazybr/mosaic-web
