@@ -4,4 +4,6 @@
 
 This is a sample application built with the [Mosaic framework](https://github.com/wazybr/mosaic). You can see it live at [wazybr.github.io/mosaic-sample](https://wazybr.github.io/mosaic-sample/).
 
-Documentation incoming.
+This application was created using [Mosaic's CLI tool](https://github.com/wazybr/mosaic-cli).
+
+This README is under construction.
