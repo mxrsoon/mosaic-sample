@@ -108,7 +108,7 @@ function initialize() {
 		})
 	});
 
-	setTheme(history.state && history.state.theme === "dark" ? themes.dark : themes.light);
+	setTheme(themes.light);
 	setupBtn1();
 	setupBtn2();
 	setupStar1();
@@ -125,8 +125,6 @@ function setTheme(theme) {
 	if ("themeColor" in Platform) {
 		Platform.themeColor = app.theme.getColor("appBarBackground");
 	}
-
-	history.replaceState({ theme: theme === themes.light ? "light" : "dark" }, "");
 }
 
 function setupBtn1() {
