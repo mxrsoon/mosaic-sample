@@ -1,14 +1,14 @@
-import { Application } from "mosaic/core/index.js";
-import { View } from "mosaic/core/index.js";
-import { ComplexLength } from "mosaic/layout/index.js";
-import { Button, Surface } from "mosaic/widgets/index.js";
-import { Text } from "mosaic/widgets/index.js";
-import { AppBar } from "mosaic/widgets/index.js";
-import { Card } from "mosaic/widgets/index.js";
-import { StrokeStyle, Color, CornerRadius, RectangleShape, StarShape, ShadowStyle } from "mosaic/drawing/index.js";
-import { Theme, ThemeColor } from "mosaic/resources/index.js";
-import { NumberAnimator, AnimationState, Interpolator, BounceInterpolator, DecelerateInterpolator, OvershootInterpolator } from "mosaic/animation/index.js";
-import { Platform } from "mosaic/platform/index.js";
+import { Application } from "@mosaic/core/index.js";
+import { View } from "@mosaic/core/index.js";
+import { ComplexLength } from "@mosaic/layout/index.js";
+import { Button, Surface } from "@mosaic/widgets/index.js";
+import { Text } from "@mosaic/widgets/index.js";
+import { AppBar } from "@mosaic/widgets/index.js";
+import { Card } from "@mosaic/widgets/index.js";
+import { StrokeStyle, Color, CornerRadius, RectangleShape, StarShape, ShadowStyle } from "@mosaic/drawing/index.js";
+import { Theme, ThemeColor } from "@mosaic/resources/index.js";
+import { NumberAnimator, AnimationState, Interpolator, BounceInterpolator, DecelerateInterpolator, OvershootInterpolator } from "@mosaic/animation/index.js";
+import { Platform } from "@mosaic/platform/index.js";
 
 /** @type {Application} */
 let app;
