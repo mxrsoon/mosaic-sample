@@ -12,30 +12,7 @@ import { Platform } from "mosaic/platform/index.js";
 
 /** @type {Application} */
 let app;
-
-const themes = {
-	light: new Theme({
-		colors: {
-			text: Color.fromHex("#000000d0"),
-			background: Color.white,
-			backgroundAlt: Color.whiteSmoke,
-			primary: Color.royalBlue,
-			appBarBackground: "primary",
-			cardBackground: "background",
-		}
-	}),
-		
-	dark: new Theme({
-		colors: {
-			text: Color.fromHex("#ffffffd0"),
-			background: Color.fromHex("#111"),
-			backgroundAlt: Color.fromHex("#222"),
-			primary: Color.fromHex("#849fff"),
-			appBarBackground: "backgroundAlt",
-			cardBackground: "backgroundAlt"
-		}
-	})
-};
+let themes;
 
 function initialize() {
 	app = new Application({
@@ -108,11 +85,12 @@ function initialize() {
 		})
 	});
 
-	setTheme(themes.light);
+	setupThemes();
 	setupBtn1();
 	setupBtn2();
 	setupStar1();
 	setupStar2();
+	setTheme(themes.light);
 
 	// Put app on global scope for debugging
 	window.app = app;
@@ -125,6 +103,32 @@ function setTheme(theme) {
 	if ("themeColor" in Platform) {
 		Platform.themeColor = app.theme.getColor("appBarBackground");
 	}
+}
+
+function setupThemes() {
+	themes = {
+		light: new Theme({
+			colors: {
+				text: Color.fromHex("#000000d0"),
+				background: Color.white,
+				backgroundAlt: Color.whiteSmoke,
+				primary: Color.royalBlue,
+				appBarBackground: "primary",
+				cardBackground: "background",
+			}
+		}),
+			
+		dark: new Theme({
+			colors: {
+				text: Color.fromHex("#ffffffd0"),
+				background: Color.fromHex("#111"),
+				backgroundAlt: Color.fromHex("#222"),
+				primary: Color.fromHex("#849fff"),
+				appBarBackground: "backgroundAlt",
+				cardBackground: "backgroundAlt"
+			}
+		})
+	};
 }
 
 function setupBtn1() {
