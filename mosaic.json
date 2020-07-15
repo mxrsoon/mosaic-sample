@@ -1,5 +1,7 @@
 {
 	"name": "mosaic-sample",
-	"platforms": [],
+	"platforms": [
+		"web"
+	],
 	"dependencies": {}
 }
