@@ -36,7 +36,7 @@ function initialize() {
 					width: new ComplexLength(() => app.view.width - 32),
 					height: 220,
 					padding: 16,
-					text: "Recent versions Chrome for Android are having an issue where the performance of the page degrades over time, reducing FPS. It's being investigated what can be done in Mosaic to revert this."
+					text: "Recent versions of Mosaic introduced an issue in that performance decreases over time after page load on web."
 				}),
 	
 				new Button({
