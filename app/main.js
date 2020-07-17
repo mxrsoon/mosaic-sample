@@ -36,7 +36,7 @@ function initialize() {
 					width: new ComplexLength(() => app.view.width - 32),
 					height: 220,
 					padding: 16,
-					text: "Recent versions of Mosaic introduced an issue in that performance decreases over time after page load on web."
+					text: "Recent versions of Mosaic introduced an issue in that performance decreases over time after page load. The issue is present on Chromium for Desktop while DevTools is open and Chrome for Android. Edge for Android is fine, probably because it's still in M77. The issue is being investigated."
 				}),
 	
 				new Button({
